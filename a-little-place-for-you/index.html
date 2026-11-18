@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8eee4">
+  <meta name="description" content="A Little Place for You — 一间给你留着灯的小房间。">
+  <title>A Little Place for You ♡</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="A Little Place for You 首页"><span class="wordmark-icon">✳</span> little place <span class="wordmark-heart">♡</span></a>
+    <div class="header-tools">
+      <span class="header-note">made with a little love</span>
+      <button id="musicToggle" class="icon-button" aria-label="播放背景音乐" title="打开 / 关闭音乐"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span id="musicLabel">音乐关</span></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="intro" id="intro" aria-labelledby="introTitle">
+      <div class="intro-left">
+        <p class="eyebrow"><span class="eyebrow-star">✦</span> A TINY UNIVERSE, JUST FOR YOU <span class="eyebrow-star">✦</span></p>
+        <h1 id="introTitle">A Little Place<br><em>for You<span class="title-dot">.</span></em></h1>
+        <div class="intro-line" aria-hidden="true"></div>
+        <p class="intro-copy">外面的世界会越来越忙，<br>但这里有一盏灯，和一个小小的家。<br>什么都不用做，回来就好。</p>
+        <button id="enterButton" class="primary-button">推开小屋的门 <span aria-hidden="true">↗</span></button>
+        <p class="intro-aside">P.S. 房间里的每一样小东西，都藏着一个秘密。</p>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <span class="float-star star-a">✦</span><span class="float-star star-b">✳</span><span class="float-star star-c">✧</span>
+        <div class="art-halo"></div>
+        <svg viewBox="0 0 450 430" class="cover-illustration">
+          <ellipse cx="223" cy="383" rx="181" ry="23" fill="#d6a890" opacity=".20"/>
+          <rect x="74" y="70" width="302" height="289" rx="142" fill="#f1cfaf" stroke="#7b554b" stroke-width="5"/>
+          <rect x="105" y="97" width="240" height="238" rx="110" fill="#fff7e9" stroke="#7b554b" stroke-width="4"/>
+          <path d="M165 332V220a60 60 0 0 1 120 0v112" fill="#a8b9ac" stroke="#7b554b" stroke-width="5"/>
+          <path d="M179 334V225a46 46 0 0 1 92 0v109" fill="#f7e3c9"/>
+          <circle cx="258" cy="283" r="5" fill="#8c6753"/>
+          <path d="M147 365h157" stroke="#7b554b" stroke-width="6" stroke-linecap="round"/>
+          <path d="M225 181q-22-24-24-39-1-17 13-18 8 0 11 11 8-15 20-9 19 11-20 55Z" fill="#d8918b"/>
+          <text x="226" y="55" text-anchor="middle" font-size="21" fill="#87685d" font-family="Georgia, serif" font-style="italic">home, in every little way</text>
+        </svg>
+        <div class="art-caption"><span>✿</span> a place to land, a place to stay <span>✿</span></div>
+      </div>
+    </section>
+
+    <section class="room-section" id="littleRoom" aria-labelledby="roomTitle" hidden>
+      <div class="section-heading"><span class="section-kicker">✦ YOU'RE HOME ✦</span><h2 id="roomTitle">欢迎来到我们的小小世界</h2><p>点一点房间里的物件，看看它们藏了什么。</p></div>
+      <div class="room-container">
+        <div class="room-sky-decor deco-left">✧</div><div class="room-sky-decor deco-right">✦</div>
+        <svg id="roomScene" viewBox="0 0 1180 700" role="group" aria-label="一间温暖的小房间，有窗户、信件、沙发、画板、相册、小猫、冰箱、钟表、夜灯和星星，可以点击探索。">
+          <defs>
+            <linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf0e3"/><stop offset="1" stop-color="#f3ddcb"/></linearGradient>
+            <linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6c788b"/><stop offset="1" stop-color="#b6a6ad"/></linearGradient>
+            <linearGradient id="lamp" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffe4a6"/><stop offset="1" stop-color="#f7bc78"/></linearGradient>
+            <filter id="roomShadow"><feGaussianBlur stdDeviation="8"/></filter>
+            <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
+            <pattern id="wallDots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#bf9d8a" opacity=".16"/></pattern>
+          </defs>
+          <rect width="1180" height="700" rx="24" fill="url(#wall)"/>
+          <rect width="1180" height="483" fill="url(#wall)"/>
+          <rect width="1180" height="483" fill="url(#wallDots)"/>
+          <path d="M0 472H1180V700H0Z" fill="#e7c7af"/><path d="M0 474H1180" stroke="#c39b86" stroke-width="5"/>
+          <path d="M0 523H1180M0 600H1180M240 474V600M520 523V700M815 474V600M1030 600V700" stroke="#ddb69e" stroke-width="2" opacity=".46"/>
+          <ellipse cx="608" cy="592" rx="363" ry="77" fill="#d5a88b" opacity=".38"/>
+          <ellipse cx="610" cy="580" rx="357" ry="74" fill="#faf1de" stroke="#d7b9a4" stroke-width="4"/>
+          <ellipse cx="610" cy="580" rx="302" ry="54" fill="none" stroke="#efcfba" stroke-width="3" stroke-dasharray="8 13"/>
+          <!-- warm garland -->
+          <path d="M119 78q165 75 318 0t319 0t315 0" stroke="#bfa58c" stroke-width="3" fill="none"/>
+          <g data-open="stars" role="button" tabindex="0" class="scene-hit" aria-label="打开星星彩蛋">
+            <path d="M190 108v22M351 105v22M522 105v22M690 104v22M867 105v22M1029 103v22" stroke="#be9b7f" stroke-width="3"/>
+            <g fill="#f9d69e" stroke="#b88d6c" stroke-width="2"><path d="m190 128 7 10 12 2-9 9 2 12-12-6-11 6 2-12-9-9 12-2Z"/><path d="m351 125 5 11 12 2-9 8 2 13-10-6-11 6 2-13-9-8 12-2Z"/><path d="m522 125 6 11 12 2-9 9 2 12-11-6-11 6 2-12-9-9 12-2Z"/><path d="m690 125 6 11 12 2-9 9 2 12-11-6-11 6 2-12-9-9 12-2Z"/><path d="m867 125 6 11 12 2-9 9 2 12-11-6-11 6 2-12-9-9 12-2Z"/><path d="m1029 125 6 11 12 2-9 9 2 12-11-6-11 6 2-12-9-9 12-2Z"/></g>
+          </g>
+          <!-- door -->
+          <g data-open="welcome" role="button" tabindex="0" class="scene-hit" aria-label="打开门口的欢迎语">
+            <path d="M33 474V277a88 88 0 0 1 176 0v197Z" fill="#bb947d" stroke="#7d5e51" stroke-width="5"/>
+            <path d="M50 473V277a71 71 0 0 1 142 0v196Z" fill="#e9c2a6" stroke="#7d5e51" stroke-width="3"/>
+            <path d="M74 467V280a47 47 0 0 1 94 0v187" fill="#efddc8" stroke="#a88671" stroke-width="2"/>
+            <circle cx="166" cy="375" r="6.5" fill="#ad775a" stroke="#805c4b" stroke-width="2"/>
+            <rect x="74" y="457" width="112" height="8" rx="4" fill="#937263"/>
+            <path d="M58 508q62-28 130 0v20H58Z" fill="#d0a88b" stroke="#aa836d" stroke-width="3"/>
+            <text x="123" y="515" font-family="Georgia" font-size="13" text-anchor="middle" fill="#765b50">welcome</text>
+            <path d="M112 308q9-12 18 0-9 11-18 0Z" fill="#d49e95"/>
+          </g>
+          <!-- shelf & memory polaroids -->
+          <g data-open="memories" role="button" tabindex="0" class="scene-hit" aria-label="打开回忆相册">
+            <rect x="237" y="196" width="199" height="152" rx="8" fill="#bc9477" stroke="#8d6b59" stroke-width="5"/>
+            <rect x="249" y="206" width="174" height="127" fill="#f7e2ca"/>
+            <path d="M249 268H423" stroke="#8d6b59" stroke-width="6"/>
+            <rect x="271" y="224" width="41" height="38" rx="3" fill="#fff7ee" transform="rotate(-9 291 241)" stroke="#a68472" stroke-width="2"/>
+            <path d="m278 250 14-18 15 20" fill="#b7c7b1"/>
+            <circle cx="298" cy="230" r="4" fill="#f5d08e"/>
+            <rect x="327" y="221" width="49" height="39" rx="3" fill="#fff7ee" transform="rotate(8 352 241)" stroke="#a68472" stroke-width="2"/>
+            <path d="m335 247 13-14 18 18" fill="#e0ada0"/>
+            <rect x="270" y="283" width="25" height="45" rx="3" fill="#adb8a8"/><rect x="301" y="291" width="22" height="37" rx="3" fill="#dea698"/><rect x="329" y="281" width="24" height="47" rx="3" fill="#e5c18a"/>
+            <path d="M387 322q-15-14-2-25 10-5 16 10 8-17 17-9 10 12-16 26Z" fill="#dfa79a"/>
+            <rect x="254" y="341" width="164" height="12" rx="3" fill="#96745e"/>
+            <text x="334" y="186" text-anchor="middle" fill="#8c6757" font-family="Georgia" font-size="17" font-style="italic">our little moments</text>
+          </g>
+          <!-- artwork on mini easel -->
+          <g data-open="gallery" role="button" tabindex="0" class="scene-hit" aria-label="打开画画小角落">
+            <path d="M387 477 443 340 502 477M443 338v149" stroke="#987459" stroke-width="9" fill="none" stroke-linecap="round"/>
+            <rect x="392" y="310" width="101" height="117" rx="5" fill="#fff8eb" stroke="#9b7764" stroke-width="5" transform="rotate(-4 442 369)"/>
+            <circle cx="419" cy="340" r="11" fill="#f3c983"/><path d="m401 397 23-32 17 19 19-29 25 40" fill="#aabfb3"/>
+            <path d="m416 395 14-17 14 13" fill="none" stroke="#b78783" stroke-width="5" stroke-linecap="round"/>
+            <rect x="404" y="425" width="74" height="8" rx="4" fill="#a27c64"/>
+            <path d="M445 432v19" stroke="#a27c64" stroke-width="6"/>
+          </g>
+          <!-- clock -->
+          <g data-open="capsule" role="button" tabindex="0" class="scene-hit" aria-label="打开时间胶囊">
+            <circle cx="600" cy="246" r="65" fill="#f2d6b4" stroke="#9e7865" stroke-width="6"/>
+            <circle cx="600" cy="246" r="54" fill="#fff9e9" stroke="#d8ae95" stroke-width="2"/>
+            <path d="M600 202v9M600 281v9M557 246h9M634 246h9" stroke="#9e7865" stroke-width="4" stroke-linecap="round"/>
+            <path d="M600 245v-28m0 28 22 14" stroke="#765b50" stroke-width="4.5" stroke-linecap="round"/>
+            <circle cx="600" cy="245" r="5" fill="#c39075"/>
+            <path d="M584 181h32" stroke="#9e7865" stroke-width="5" stroke-linecap="round"/>
+            <text x="600" y="330" font-family="Georgia" font-size="16" fill="#997b68" text-anchor="middle">some day, someday</text>
+          </g>
+          <!-- future window -->
+          <g data-open="future" role="button" tabindex="0" class="scene-hit" aria-label="打开未来星空">
+            <rect x="791" y="189" width="258" height="247" rx="102" fill="#ad826b" stroke="#7d6255" stroke-width="6"/>
+            <path d="M805 423V288a115 115 0 0 1 230 0v135Z" fill="url(#night)" stroke="#eed5ba" stroke-width="7"/>
+            <path d="M920 205v220M805 324h230" stroke="#efd3b8" stroke-width="10"/>
+            <circle cx="965" cy="256" r="27" fill="#fce9bd"/>
+            <circle cx="976" cy="250" r="26" fill="#8c8b9b"/>
+            <g fill="#ffedc2"><circle cx="841" cy="255" r="3"/><circle cx="883" cy="231" r="3"/><circle cx="1005" cy="299" r="3"/><circle cx="863" cy="368" r="3"/><circle cx="992" cy="380" r="2.5"/></g>
+            <path d="M793 229q-31 22-27 104 5 37 27 55" stroke="#dfb39f" stroke-width="23" fill="none" stroke-linecap="round"/><path d="M1050 229q30 22 27 104-3 37-27 55" stroke="#dfb39f" stroke-width="23" fill="none" stroke-linecap="round"/>
+            <rect x="781" y="423" width="281" height="18" rx="7" fill="#ae846d"/>
+            <text x="921" y="469" font-family="Georgia" font-size="16" font-style="italic" fill="#94725f" text-anchor="middle">we have so much to see</text>
+          </g>
+          <!-- fridge -->
+          <g data-open="fridge" role="button" tabindex="0" class="scene-hit" aria-label="打开幸福冰箱">
+            <rect x="38" y="532" width="155" height="143" rx="13" fill="#cbd2bc" stroke="#82947e" stroke-width="5"/>
+            <path d="M38 602h155" stroke="#82947e" stroke-width="4"/>
+            <path d="M173 552v28M173 620v30" stroke="#82947e" stroke-width="7" stroke-linecap="round"/>
+            <rect x="75" y="546" width="49" height="46" rx="3" fill="#fcf1ce" transform="rotate(-8 100 568)"/>
+            <path d="m87 568 7 9 16-18" stroke="#c99f83" stroke-width="3" fill="none"/>
+            <circle cx="104" cy="544" r="6" fill="#e1ab96"/>
+            <path d="M68 625q5-11 15 0 5-11 15 0-15 22-30 0" fill="#e4adab"/>
+          </g>
+          <!-- couch -->
+          <g data-open="mood" role="button" tabindex="0" class="scene-hit" aria-label="坐到沙发上聊聊今天">
+            <rect x="499" y="459" width="284" height="143" rx="56" fill="#e0aa96" stroke="#9e7868" stroke-width="6"/>
+            <rect x="531" y="425" width="221" height="117" rx="51" fill="#f4c4a9" stroke="#9e7868" stroke-width="5"/>
+            <rect x="492" y="493" width="56" height="98" rx="26" fill="#eab49e" stroke="#9e7868" stroke-width="5"/>
+            <rect x="742" y="493" width="51" height="98" rx="26" fill="#eab49e" stroke="#9e7868" stroke-width="5"/>
+            <path d="M524 580h244" stroke="#a37a67" stroke-width="5" stroke-linecap="round"/>
+            <rect x="542" y="590" width="17" height="27" rx="5" fill="#96705d"/><rect x="733" y="590" width="17" height="27" rx="5" fill="#96705d"/>
+            <!-- quiet sofa: cushions and a folded throw, no character illustrations -->
+            <rect x="548" y="474" width="84" height="80" rx="21" fill="#f7d6be" stroke="#bc9582" stroke-width="3"/>
+            <rect x="655" y="474" width="87" height="80" rx="21" fill="#f6d2ba" stroke="#bc9582" stroke-width="3"/>
+            <path d="M582 481q55 5 103 0l-12 91q-53 9-105 0Z" fill="#f8e9d3" stroke="#d5b69b" stroke-width="3" opacity=".7"/>
+            <path d="M585 528q40 8 85 0M587 547q40 6 84 0" fill="none" stroke="#ead1b5" stroke-width="2.5"/>
+          </g>
+          <!-- letter on the table -->
+          <g data-open="letters" role="button" tabindex="0" class="scene-hit" aria-label="打开桌上的信封">
+            <ellipse cx="656" cy="622" rx="164" ry="37" fill="#be977e" opacity=".30"/>
+            <rect x="517" y="610" width="283" height="43" rx="21" fill="#c99c7c" stroke="#8f6c5d" stroke-width="5"/>
+            <path d="M552 646v30M761 646v30" stroke="#96715b" stroke-width="12" stroke-linecap="round"/>
+            <g transform="translate(607 572) rotate(-7 53 30)">
+              <rect x="0" y="0" width="112" height="65" rx="5" fill="#fff6e6" stroke="#bd967c" stroke-width="3"/>
+              <path d="m3 6 52 38L109 6" fill="none" stroke="#bd967c" stroke-width="3"/>
+              <path d="M46 35q6-11 12-2 7-10 15-2 6 9-16 22Z" fill="#dfaaa5"/>
+            </g>
+            <text x="667" y="607" fill="#a78470" font-size="12" font-family="Georgia" text-anchor="middle">a letter for you</text>
+          </g>
+          <!-- lamp -->
+          <g data-open="goodnight" role="button" tabindex="0" class="scene-hit" aria-label="点亮床头的小夜灯">
+            <ellipse cx="1057" cy="519" rx="66" ry="63" fill="#f9d49a" opacity=".42" filter="url(#glow)"/>
+            <path d="M1019 492q6-44 38-44 35 0 43 44Z" fill="url(#lamp)" stroke="#a68167" stroke-width="4"/>
+            <rect x="1047" y="492" width="19" height="58" rx="4" fill="#b38e70"/>
+            <ellipse cx="1057" cy="553" rx="40" ry="9" fill="#a17e69"/>
+            <path d="m1065 405 5-14m18 30 14-6m-89 5-13-5" stroke="#e3b36b" stroke-width="3" stroke-linecap="round"/>
+            <rect x="990" y="552" width="140" height="17" rx="8" fill="#b88e71"/>
+            <path d="M1010 568v62M1108 568v62" stroke="#9c7961" stroke-width="12" stroke-linecap="round"/>
+          </g>
+          <!-- cat corner -->
+          <g data-open="cat" role="button" tabindex="0" class="scene-hit" aria-label="打开未来猫咪的小窝">
+            <ellipse cx="341" cy="646" rx="100" ry="27" fill="#d3a991" opacity=".4"/>
+            <path d="M268 641q2-60 73-63 74 3 76 63-76 25-149 0Z" fill="#d4b6a4" stroke="#9b7868" stroke-width="4"/>
+            <ellipse cx="344" cy="638" rx="62" ry="25" fill="#f8e9d8"/>
+            <g transform="translate(305 578)"><path d="M13 34 3 2l25 19M53 23 74 2l2 34" fill="#fbf5e9" stroke="#a28270" stroke-width="3"/><ellipse cx="39" cy="39" rx="39" ry="33" fill="#fdf7ec" stroke="#a28270" stroke-width="3"/><path d="M23 38h5m22 0h5" stroke="#73564b" stroke-width="3" stroke-linecap="round"/><path d="m37 46 4 3 4-3" fill="none" stroke="#73564b" stroke-width="2" stroke-linecap="round"/></g>
+            <circle cx="256" cy="661" r="18" fill="#e4b5b0" stroke="#b18d86" stroke-width="3"/><path d="m246 653 20 16m-19 0 18-14" stroke="#f4d6d3" stroke-width="2"/>
+          </g>
+          <g aria-hidden="true" fill="#fff3df" opacity=".7"><circle cx="470" cy="190" r="5"/><circle cx="745" cy="260" r="4"/><circle cx="1104" cy="282" r="5"/></g>
+        </svg>
+        <div id="sceneTooltip" class="scene-tooltip" aria-hidden="true"></div>
+      </div>
+      <p class="room-hint">✧ 每个物件都可以点击 · 在手机上也可以用下面的小标签探索 ✧</p>
+      <nav class="room-nav" id="roomNav" aria-label="探索房间里的物件"></nav>
+      <div class="footer-message"><span>☾</span><p>不管今天是什么样的一天，<br>这个小小的地方，都为你留着。</p><span>✧</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>A LITTLE PLACE FOR YOU</span><span>♡ &nbsp; made for the ordinary, lovely days &nbsp; ♡</span></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button id="closeModal" class="modal-close" aria-label="关闭这个小秘密">×</button>
+      <div class="modal-decoration">✦ <span>✧</span> ✦</div>
+      <div id="modalContent"></div>
+      <p class="modal-bottom">all the little things, all the love ♡</p>
+    </section>
+  </div>
+
+  <div class="photo-backdrop" id="photoBackdrop" hidden role="dialog" aria-modal="true" aria-label="查看大照片">
+    <button id="photoClose" class="photo-close" type="button" aria-label="关闭照片">×</button>
+    <button id="photoPrev" class="photo-arrow" type="button" aria-label="上一张">‹</button>
+    <figure class="photo-figure"><img id="photoBig" alt="我们收藏的一张照片"><figcaption id="photoCaption"></figcaption></figure>
+    <button id="photoNext" class="photo-arrow" type="button" aria-label="下一张">›</button>
+  </div>
+  <audio id="bgMusic" preload="none" loop src="assets/little-place-theme.mp3"></audio>
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
