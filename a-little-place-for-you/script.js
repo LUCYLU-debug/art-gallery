@@ -16,7 +16,7 @@ const contentNode = $('modalContent');
 function tileGrid(cards) {
   const grid=el('div','tile-grid');
   cards.forEach(item=>{
-    const tile=el('div','tile'+((item.body||'').includes('[待') || (item.body||'').includes('[这里') || (item.body||'').includes('[以后') || (item.body||'').includes('[填') || (item.body||'').includes('[留给') ? ' is-placeholder':''));
+    const tile=el('div','tile');
     tile.append(el('div','tile-icon',item.emoji||'✿'),el('h4','',item.title||''),el('p','',item.body||''));grid.append(tile);
   });return grid;
 }
@@ -28,15 +28,15 @@ function pictureGrid(photos) {
     card.append(frame,el('p','',item.caption||'一段小回忆'));if(item.image){card.setAttribute('role','button');card.tabIndex=0;card.setAttribute('aria-label','查看照片：'+(item.caption||''));const open=()=>openPhoto(photos,index);card.addEventListener('click',open);card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});}grid.append(card);
   });return grid;
 }
-function note(title,body){const box=el('div','paper-note');box.append(el('h4','',title),el('p','',body));return box;}
+function note(title,body,kind=''){const box=el('div','paper-note'+(kind==='letters'?' cute-letter':''));box.append(el('h4','',title),el('p','',body));return box;}
 function showModal(key) {
   const data=CONTENT[key]; if(!data) return;
   lastFocus=document.activeElement;contentNode.replaceChildren();
   const heading=el('h3','',data.title||''); heading.id='modalTitle';
   contentNode.append(el('div','modal-emoji',data.emoji||'♡'),heading,el('p','modal-subtitle',data.subtitle||''));
   if(data.intro) contentNode.append(el('p','modal-intro',data.intro));
-  if(data.note) contentNode.append(note(data.noteTitle||'给你的话',data.note));
-  if(data.notes) data.notes.forEach(item=>contentNode.append(note(item.title,item.body)));
+  if(data.note) contentNode.append(note(data.noteTitle||'给你的话',data.note,key));
+  if(data.notes) data.notes.forEach(item=>contentNode.append(note(item.title,item.body,key)));
   if(data.cards) contentNode.append(tileGrid(data.cards));
   if(data.photos) contentNode.append(pictureGrid(data.photos));
   if(data.wishes){const list=el('ul','star-list');data.wishes.forEach(w=>list.append(el('li','',w)));contentNode.append(list);}
